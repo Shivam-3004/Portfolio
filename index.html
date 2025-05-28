@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Developer portfolio showcasing projects, about me, skills, photo, and contact info." />
+    <title>Coder Bhaiya/Didi Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <button id="toggle-theme" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">🌗</button>
+
+    <header>
+        <h1>Shivam—The Code Alchemist! 🚀</h1>
+        <p>The Tech Unicorn Who Codes With Thok Ke Thappad!</p>
+        <nav aria-label="Primary navigation">
+            <button onclick="scrollToSection('home')" id="nav-home">Home</button>
+            <button onclick="scrollToSection('projects')" id="nav-projects">Projects</button>
+            <button onclick="scrollToSection('about')" id="nav-about">About Me</button>
+            <button onclick="scrollToSection('skills')" id="nav-skills">Skills</button>
+            <button onclick="scrollToSection('contact')" id="nav-contact">Contact</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home / Intro Section -->
+        <section id="home" class="intro" tabindex="-1" aria-labelledby="home-title">
+            <h2 id="home-title" class="intro-heading">
+                <span class="name">Shivam—The Code Alchemist!</span>
+                <span class="typed-text" aria-live="polite" aria-atomic="true"></span>
+            </h2>
+            <p class="intro-subtitle">Crafting magic with every line of code — welcome to my world!</p>
+            <p>
+                I don’t just write programs, I engineer solutions. Whether it’s crafting a dynamic UI, optimizing databases, or diving into complex algorithms, I make tech efficient, engaging, and powerful.
+            </p>
+            <p>
+                🔹 Pixels meet Purpose – Every click should feel smooth, every animation should sync perfectly.<br>
+                🔹 Logic meets Creativity – Code isn’t just syntax; it’s storytelling, structuring ideas with precision and flair.<br>
+                🔹 Innovation meets Execution – Tech isn’t just about building—it’s about solving, refining, and elevating experiences.
+            </p>
+            <p>
+                If clean code, sharp logic, and a dash of creativity excite you, welcome to my digital universe—where innovation meets execution and every pixel tells a story!
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" tabindex="-1" aria-labelledby="projects-title">
+            <h2 id="projects-title">My Projects</h2>
+            <div class="projects-list" aria-label="Showcase of projects">
+                <article class="project-card" tabindex="0" role="region" aria-labelledby="project1-title">
+                    <h3 id="project1-title">PICK MANGA 🌟</h3>
+                    <p>An anime/manga selection app with an engaging UI and smooth navigation.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Shivam-3004/Pick-Manga" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for PICK MANGA project">GitHub</a>
+                        <a href="https://shivam-3004.github.io/Pick-Manga/" target="_blank" rel="noopener noreferrer" aria-label="Live demo for PICK MANGA project">Live Demo</a>
+                    </div>
+                </article>
+
+                <article class="project-card" tabindex="0" role="region" aria-labelledby="project2-title">
+                    <h3 id="project2-title">Todo-App ✅</h3>
+                    <p>A clean, efficient task management tool with intuitive interactions.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Shivam-3004/Todo-App" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Todo-App project">GitHub</a>
+                        <a href="https://github.com/Shivam-3004/Todo-App" target="_blank" rel="noopener noreferrer" aria-label="Live demo for Todo-App project">Live Demo</a>
+                    </div>
+                </article>
+
+                <article class="project-card" tabindex="0" role="region" aria-labelledby="project3-title">
+                    <h3 id="project3-title">Photo Gallery 📷</h3>
+                    <p>An interactive web gallery with hover effects, filters, and sleek design.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Shivam-3004/gallery-project" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository for Photo Gallery project">GitHub</a>
+                        <a href="https://shivam-3004.github.io/gallery-project/" target="_blank" rel="noopener noreferrer" aria-label="Live demo for Photo Gallery project">Live Demo</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" tabindex="-1" aria-labelledby="about-title">
+            <h2 id="about-title">About Me</h2>
+            <p class="about-text">
+                I blend technical mastery with creative problem-solving. With a strong foundation in C, C++, JavaScript, and SQL, I navigate both logic-heavy algorithms and seamless front-end experiences. My adaptability lets me switch effortlessly between hardcore development and user-focused design, ensuring functionality meets aesthetics.
+            </p>
+            <div class="resume-btn-container">
+                <a href="https://drive.google.com/file/d/1DytBMVUZonNdwQZmHEkXB7tBdR-NlmRB/view?usp=sharing" download="CoderSHIVAM_Resume.pdf" class="resume-btn" aria-label="Download my resume as PDF">Download Resume</a>
+            </div>
+        </section>
+
+        <!-- Photo Section -->
+        <section id="photo" tabindex="-1" aria-labelledby="photo-title">
+            <h2 id="photo-title">Photo</h2>
+            <div id="photo-section">
+                <img src="src/WhatsApp Image 2025-05-28 at 14.17.30_97a2ce3a.jpg" alt="Coder Bhaiya/Didi Portrait" tabindex="0" />
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" tabindex="-1" aria-labelledby="skills-title">
+            <h2 id="skills-title">Core Skills & Expertise</h2>
+            <div id="skills">
+                <h3>🔧 Hard Skills</h3>
+                <ul>
+                    <li>✅ Programming Languages: C, C++, JavaScript, SQL</li>
+                    <li>✅ Web Development: HTML, CSS, JavaScript, React.js (beginner), React Native (exploring)</li>
+                    <li>✅ Database Management: RDBMS, DBMS architecture, ACID properties, SQL query optimization, normalization (1NF-4NF)</li>
+                    <li>✅ Data Structures & Algorithms: Sorting techniques, recursion, linked lists</li>
+                    <li>✅ Debugging & Deployment: GitHub Pages, troubleshooting deployment issues</li>
+                    <li>✅ Code Optimization: Lazy loading techniques, efficient query execution</li>
+                </ul>
+                <h3>🌟 Soft Skills</h3>
+                <ul>
+                    <li>💬 Effective Communication – Clear and structured documentation.</li>
+                    <li>🛠 Creative Problem-Solving – Designing user-friendly and efficient solutions.</li>
+                    <li>🎯 Adaptive Thinking – Switching between professional and casual communication styles.</li>
+                    <li>🤝 Collaboration & Leadership – Engaging with open-source communities and structured development.</li>
+                </ul>
+                <h3>Skill Levels</h3>
+                <div class="skill-bar-container">
+                    <div class="skill-title"><span>C Language</span><span>90%</span></div>
+                    <div class="skill-bar" aria-label="C Language skill level">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-title"><span>C++ Language</span><span>85%</span></div>
+                    <div class="skill-bar" aria-label="C++ skill level">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-title"><span>CSS & Animations</span><span>80%</span></div>
+                    <div class="skill-bar" aria-label="CSS and Animations skill level">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-title"><span>JavaScript</span><span>70%</span></div>
+                    <div class="skill-bar" aria-label="JavaScript skill level">
+                        <div class="skill-progress" data-progress="70"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-container">
+                    <div class="skill-title"><span>HTML</span><span>75%</span></div>
+                    <div class="skill-bar" aria-label="HTML skill level">
+                        <div class="skill-progress" data-progress="75"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" tabindex="-1" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact Me</h2>
+            <form id="contact-form" aria-label="Contact form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true" aria-label="Your name" />
+                <input type="email" id="email" name="email" placeholder="Your Email" required aria-required="true" aria-label="Your email address" />
+                <textarea id="message" name="message" placeholder="Your Message" required aria-required="true" aria-label="Your message"></textarea>
+                <button type="submit" class="send-btn" aria-label="Send message">Send Message</button>
+            </form>
+            <div class="contact-links" aria-label="Social media and direct contact links">
+                <a href="https://www.linkedin.com/in/shivam-paliwal-226640301/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+                <a href="https://github.com/Shivam-3004" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub</a>
+                <a href="mailto:paliwalshivam884@gmail.com" aria-label="Send email">Email</a>
+            </div>
+            <p id="form-status" role="alert" aria-live="polite" style="margin-top:1rem; color:#0077ff; font-weight:600;"></p>
+        </section>
+
+        <!-- 404 Page -->
+        <section id="not-found" aria-label="404 error page">
+            <h1>404</h1>
+            <p>Oops! Looks like you got lost in the web jungle.</p>
+            <a href="#home" onclick="showHome()">Take me back home</a>
+        </section>
+    </main>
+
+    <footer>
+        &copy; Shivam 2025. All rights reserved.❤️
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
