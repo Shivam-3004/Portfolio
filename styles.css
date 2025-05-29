@@ -730,6 +730,9 @@ body.dark footer {
     .skill-bar-container {
         margin-bottom: 1rem;
     }
+    .name {
+        display: none;
+    }
 }
 
 /* Safe-area support for iOS devices */
