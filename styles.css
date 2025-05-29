@@ -151,6 +151,10 @@ h2 {
     font-weight: 700;
     min-width: 120px;
     animation: blink-caret 0.75s step-end infinite;
+    display: inline-block;
+    white-space: normal;      /* Allow wrapping */
+    word-wrap: break-word;    /* Break long words if needed */
+    overflow: visible;        /* Ensure nothing is hidden */
 }
 
 @keyframes blink-caret {
@@ -620,13 +624,23 @@ body.dark footer {
    Enhanced Responsive Media Queries
 --------------------------------------------------- */
 
-/* For very small devices (phones, including many Android and iOS devices) */
+/* For very small devices (max-width: 480px) */
 @media (max-width: 480px) {
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #fff;  /* Solid background */
+        padding: 0.3em 0.5em;      /* Reduced padding */
+        text-align: center;
+    }
     header h1 {
-        font-size: 1.8rem;
+        font-size: 1.3rem;       /* Smaller title */
+        margin: 0.2em 0;
     }
     header p {
-        font-size: 0.9rem;
+        font-size: 0.75rem;      /* Smaller subtitle */
+        margin: 0.2em 0;
     }
     nav {
         flex-direction: column;
@@ -634,35 +648,58 @@ body.dark footer {
         align-items: center;
     }
     nav button {
-        margin: 0.3rem 0;
+        font-size: 0.75rem;
         padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
+        margin: 0.3rem 0;
     }
-    main {
-        margin: 0.5rem;
-        padding: 0 0.5rem;
-    }
-    .projects-list {
-        grid-template-columns: 1fr;
-    }
-    .resume-btn {
-        font-size: 0.9rem;
-        padding: 0.7rem 1.2rem;
-    }
-    .skill-bar-container {
-        margin-bottom: 0.8rem;
-    }
-    main section h2 span {
-        font-size: 1.5rem; /* Adjust as needed */
-        display: inline; /* Use inline to prevent taking full width */
-        max-width: none; /* Remove max-width restriction */
-        white-space: nowrap; /* Prevent wrapping if appropriate */
+    .typed-text {
+        display: inline-block;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow: visible;
         text-align: center;
+    }
+    
+    /* Adjust the ".name" span so that its text doesn't get cut off */
+    .name {
+        display: inline-block;
+        /* Optimize photo section for mobile devices */
+        @media (max-width: 768px) {
+            /* Ensure the photo container has appropriate margins/padding */
+            #photo-section {
+                padding: 0 1rem;
+                text-align: center;
+            }
+            /* Make the image responsive */
+            #photo-section img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 8px; /* Optional: add smooth corners */
+            }
+        }        white-space: normal;    /* allow wrapping */
+        word-break: break-all;  /* break long words if necessary */
+        overflow: visible;
+        text-align: center;
+        max-width: 100%;
     }
 }
 
 /* For mobile devices (max-width: 768px) */
 @media (max-width: 768px) {
+    header {
+        /* Remove sticky behavior so header scrolls normally */
+        position: static;
+        transition: none; /* Disable transform transitions */
+    }
+    /* Optionally, remove the header scroll classes if they were added */
+    header.scroll-down,
+    header.scroll-up {
+        transform: none;
+    }
+    
+    /* You can keep the rest of your mobile styles as before */
     header h1 {
         font-size: 2.2rem;
     }
@@ -746,3 +783,20 @@ body.dark footer {
         gap: 2rem;
     }
 }
+
+
+/* Header scroll transitions */
+header {
+    transition: transform 0.3s ease;
+}
+
+header.scroll-down {
+    transform: translateY(-100%);
+}
+
+header.scroll-up {
+    transform: translateY(0);
+}
+
+/* Optionally for responsive devices: 
+   Adjust header padding or font sizes if needed when header is hidden/shown */
